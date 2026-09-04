@@ -23,3 +23,29 @@ sht.begin();
 Serial.println("Memulai akuisisi data sensor DHT22...");
 ```
 Mengatur komunikasi dengan Serial Monitor pada baud rate 115200, inisialisasi sensor dengan dht.begin(). Kemudian menampilkan pesan awal pada Serial Monitor dengan Serial.println.
+```cpp
+float kelembaban = dht.readHumidity();
+float suhu = dht.readTemperature();
+```
+Membuat variabel kelembaban dan suhu untuk membaca nilai dari sensor kemudian menyimpannya di variabel tersebut.
+```cpp
+if (isnan(kelembaban) || isnan(suhu)) {
+  Serial.println("Gagal membaca data dari sensor DHT22!");
+}
+```
+isnan() digunakan untuk memeriksa apakah hasil pembacaan sensor berupa NaN atau tidak valid. Jika salah satu pembacaan tidak valid, program menampilkan pesan gagal.
+```cpp
+else {
+Serial.print("Suhu: ");
+Serial.print(suhu);
+Serial.print(" °C, Kelembaban: ");
+    Serial.print(kelembaban);
+    Serial.println(" %");
+}
+```
+Jika pembacaan berhasil, nilai suhu dan kelembaban ditampilkan pada Serial Monitor beserta satuannya.
+```cpp
+delay(2000);
+```
+Memberikan jeda selama 2 detik sebelum program melakukan pembacaan sensor berikutnya.
+<hr>
