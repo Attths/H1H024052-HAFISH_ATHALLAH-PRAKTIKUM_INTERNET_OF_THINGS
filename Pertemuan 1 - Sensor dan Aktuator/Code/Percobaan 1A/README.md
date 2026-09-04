@@ -39,8 +39,8 @@ else {
 Serial.print("Suhu: ");
 Serial.print(suhu);
 Serial.print(" °C, Kelembaban: ");
-    Serial.print(kelembaban);
-    Serial.println(" %");
+Serial.print(kelembaban);
+Serial.println(" %");
 }
 ```
 Jika pembacaan berhasil, nilai suhu dan kelembaban ditampilkan pada Serial Monitor beserta satuannya.
