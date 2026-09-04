@@ -1,4 +1,3 @@
-```cpp
 #include <DHT.h>
 #define DHTPIN 4 // pin data DHT22 terhubung ke GPIO 4
 #define DHTTYPE DHT11
@@ -33,4 +32,3 @@ void loop() {
     }
   }
 }
-```
