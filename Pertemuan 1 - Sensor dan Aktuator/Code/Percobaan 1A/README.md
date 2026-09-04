@@ -19,7 +19,7 @@ DHT dht(DHTPIN, DHTTYPE);
 Membuat objek dht berdasarkan pin dan jenis sensor yang telah ditentukan sehingga fungsi-fungsi dari library DHT dapat digunakan.
 ```cpp
 Serial.begin(115200);
-sht.begin();
+dht.begin();
 Serial.println("Memulai akuisisi data sensor DHT22...");
 ```
 Mengatur komunikasi dengan Serial Monitor pada baud rate 115200, inisialisasi sensor dengan dht.begin(). Kemudian menampilkan pesan awal pada Serial Monitor dengan Serial.println.
